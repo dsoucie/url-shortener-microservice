@@ -1,0 +1,22 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "this is a simple url shortener made for freeCodeCamp.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsoucie/url-shortener-microservice.git"
+  },
+  "author": "dsoucie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsoucie/url-shortener-microservice/issues"
+  },
+  "homepage": "https://github.com/dsoucie/url-shortener-microservice#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
