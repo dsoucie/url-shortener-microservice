@@ -4,7 +4,7 @@
   "description": "this is a simple url shortener made for freeCodeCamp.org",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dsoucie/url-shortener-microservice#readme",
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "mongodb": "^2.2.31"
   }
 }
