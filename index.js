@@ -80,6 +80,4 @@ app.get('*', (request, response) => {
   response.send('please enter a valid URL');
 })
 
-app.listen(8080);
-
-//'mongodb://dsoucie:devpassword@ds161164.mlab.com:61164/url-shortener-microservice-dsoucie'
+app.listen(process.env.PORT || 8080);
