@@ -59,13 +59,13 @@ app.get("/create/:inputURL(https?://[A-Za-z0-9-\.]+\.[A-Za-z0-9]+)", (request, r
             });
             console.log('alldokslength: ', allDocsLength);
             response.json({
-              inputURL: input, shortened: `https://shrt-dsoucie.c9users.io/${allDocsLength}`
+              inputURL: input, shortened: `https://shrtr.herokuapp.com/${allDocsLength}`
             });
           });
         } else {
           var responseJSON = {};
           responseJSON.inputURL = input;
-          responseJSON.shortened = `https://shrt-dsoucie.c9users.io/${documents[0].shortened}`
+          responseJSON.shortened = `https://shrtr.herokuapp.com/${documents[0].shortened}`
           response.json(responseJSON);
         }
       })
