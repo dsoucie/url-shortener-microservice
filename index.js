@@ -3,8 +3,10 @@ const mongo = require('mongodb').MongoClient;
 
 var app = express();
 
+app.set('view engine', 'pug');
+
 app.get('/', (request, response) => {
-  response.send('Please append a URL to localhost:8080/create/ to the URL to recieve a shortened form.');
+  response.render('index');
 });
 
 app.get('/:shortened', (request, response) => {
@@ -55,11 +57,16 @@ app.get("/create/:inputURL(https?://[A-Za-z0-9-\.]+\.[A-Za-z0-9]+)", (request, r
               inputURL: input,
               shortened: allDocsLength,
             });
+            console.log('alldokslength: ', allDocsLength);
+            response.json({
+              inputURL: input, shortened: `http://localhost:8080/${allDocsLength}`
+            });
           });
-
-          response.send('Shortened URL added to Database');
         } else {
-          response.json(documents);
+          var responseJSON = {};
+          responseJSON.inputURL = input;
+          responseJSON.shortened = `http://localhost:8080/${documents[0].shortened}`
+          response.json(responseJSON);
         }
       })
     })
